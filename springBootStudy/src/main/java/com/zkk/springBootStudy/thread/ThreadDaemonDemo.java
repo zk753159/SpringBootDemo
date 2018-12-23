@@ -28,10 +28,16 @@ public class ThreadDaemonDemo implements Runnable {
 		Thread thread2 = new Thread(new ThreadDaemonDemo(true), "乔峰");
 		//设置守护线程 当程序中只有守护线程，程序就结束。。。
 		thread1.setDaemon(true);
-		thread2.setDaemon(false);
+	//	thread2.setDaemon(false);
 		
 		thread1.start();
 		thread2.start();
+		try {
+			thread1.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println("电视剧结束。。。。。。。。");
 	}
 
