@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.zkk.springBootStudy.model.ModelRes;
 
@@ -22,6 +23,9 @@ public class HelloWorld {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+
+	@Autowired
+	private RestTemplate tp;
 
 	@Value("${cupSize}")
 	private String cupSize;
