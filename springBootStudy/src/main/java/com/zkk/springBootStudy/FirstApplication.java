@@ -12,11 +12,14 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.EnableAsync;
 
+import com.zkk.springBootStudy.dao.ProductDao;
 import com.zkk.springBootStudy.model.UserInfo;
 import com.zkk.springBootStudy.myconfig.DataSourceProperties;
 import com.zkk.springBootStudy.myconfig.FileConfig;
 import com.zkk.springBootStudy.myconfig.TomcatProperties;
 import com.zkk.springBootStudy.myconfig.UserConfig;
+
+
 
 @SpringBootApplication
 @EnableAsync
@@ -65,7 +68,7 @@ public class FirstApplication {
 		
 		System.out.println("jdbcTemp::::" + context.getBean(JdbcTemplate.class));
 		
-		//context.getBean(ProductDao.class).addProduct("aaaaa","12312312");
+		context.getBean(ProductDao.class).addProduct("BBBBB","123121");
 		
 	}
 }
