@@ -1,0 +1,8 @@
+server:
+ context-path: /spring-boot-starter-redis
+ port: 8081
+redis:
+ host: 192.168.0.71
+ port: 9999
+ 
+ 
